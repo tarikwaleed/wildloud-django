@@ -12,4 +12,8 @@ ENV PYTHONPATH /app/src
 RUN \
      pip install --no-cache-dir -r requirements-live.txt         
 
+COPY ./entrypoint.sh /
+
 COPY . .
+
+ENTRYPOINT ["sh", "/entrypoint.sh"]
