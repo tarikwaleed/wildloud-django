@@ -3,19 +3,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      {% block head_title %}
-        Dockerized Django App
+      {% block title %}
+        Your App
       {% endblock %}
     </title>
-    {% include 'head/css.html' %}
+    <!-- Include your stylesheets and other common assets here -->
   </head>
   <body>
-    <div>
-      {% block content %}
-      {% endblock %}
+    <div id="wrapper">
+      {% include 'components/_sidebar.html' %}
+      {% include 'components/_topbar.html' %}
+      <div id="content">
+        <main>
+          {% block content %}
+          {% endblock %}
+        </main>
+      </div>
     </div>
+    <!-- Include your scripts and other common assets here -->
   </body>
 </html>

@@ -1,0 +1,10 @@
+<!-- components/_topbar.html -->
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/tailwind-output.css' %}" />
+<div class="topbar">
+  {% comment %} {% include 'components/_topbar/_logo.html' %} {% endcomment %}
+  {% comment %} {% include 'components/_topbar/_adbanner.html' %} {% endcomment %}
+  {% include 'components/_topbar/_profile_menu.html' %}
+</div>
